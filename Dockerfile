@@ -20,6 +20,7 @@ RUN         dpkg --add-architecture i386 \
             && dpkg-reconfigure --frontend=noninteractive locales \
             && update-locale LANG=en_US.UTF-8 \
             && apt-get install -y --no-install-recommends gpg-agent software-properties-common apt-transport-https multiarch-support curl wget libcompress-raw-zlib-perl \
+            && apt-get install -y --no-install-recommends libprotobuf10 \
             && apt-get install -y --no-install-recommends libidn11 \
             && apt-get install -y --no-install-recommends librtmp1 \
             && apt-get install -y --no-install-recommends redis-server \
